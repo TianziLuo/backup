@@ -13,17 +13,17 @@ def safe_execute(func):
 
 def main():
     root = tk.Tk()
-    root.title("Configuration Panel")
-    root.geometry("400x240")  # 窗口大小
-    root.configure(bg="#162A3B")  # 窗口背景颜色
+    root.title("BackUp Panel")
+    root.geometry("400x180")  # 窗口大小
+    root.configure(bg="#0F172A")  # 窗口背景颜色
 
     # 美化按钮样式
     button_style = {
         "width": 23,  # 按钮宽度（字符数）
         "font": ("Arial", 13, "bold"),
-        "bg":"#305D82",
+        "bg": "#0090D4",
         "fg": "white",
-        "activebackground": "#84AED1",
+        "activebackground": "#0080D9",
         "activeforeground": "white",
     }
 
