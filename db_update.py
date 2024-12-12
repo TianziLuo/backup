@@ -1,4 +1,8 @@
 import os
+import tkinter as tk
+from tkinter import simpledialog
+
+
 def db_update():
     # File path for the input
     input_file_path = r"C:\uServePro\Server\DB_Update.txt"
@@ -8,7 +12,13 @@ def db_update():
     output_file_path = os.path.join(desktop_path, "db_update_filtered.sql")
 
     # Get the user input for the target year and month (yyyymm format)
-    yyyymm = input("Please enter the target yyyymm (e.g., 202411): ").strip()
+    
+    # Create a Tkinter root window
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+
+    # Prompt the user for the new MySQL connection string
+    yyyymm = simpledialog.askstring("db_update", "Please enter the target yyyymm (e.g., 202411):")
 
     # Validate the input format
     if not yyyymm.isdigit() or len(yyyymm) != 6:
